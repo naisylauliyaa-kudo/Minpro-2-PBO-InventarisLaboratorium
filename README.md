@@ -1,4 +1,4 @@
-# Minpro-1-PBO-Sistem Inventaris Laboratorium Kimia
+# Minpro-2-PBO-Sistem Inventaris Laboratorium Kimia
 
 Naisyla Auliya Rahmi Putri  
 Kelas: B  
