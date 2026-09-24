@@ -1,0 +1,7 @@
+model\KeperluanLab.class
+control\LabControll.class
+view\TampilkanInventarisLab.class
+model\BahanLab.class
+com\mycompany\inventarislab\InventarisLab.class
+model\Peminjaman.class
+model\AlatLab.class
