@@ -30,6 +30,8 @@ Program ini terdiri dari beberapa class yang digunakan untuk menjalankan sistem 
 | 6 | KeperluanLab.java | Menyimpan objek model pendukung untuk mencatat informasi atau keperluan operasional tambahan di laboratorium. |
 | 7 | InventarisLab.java | Kelas entry point utama (main) yang mengeksekusi dan menginisialisasi sistem program. |
 
+---
+
 ## 4. Hubungan antarclass
 - InventarisLab.java bertindak sebagai kelas utama (entry point) yang memanggil dan menjalankan menu dari kelas View.
 - TampilkanInventarisLab.java (di package view) bertugas menerima input interaktif dari pengguna, menjalankan logika menu CLI, dan memanggil method yang ada di Controller.
@@ -56,6 +58,8 @@ Program ini terdiri dari beberapa class yang digunakan untuk menjalankan sistem 
 ├── Java Dependencies
 └── Project Files
 ```
+---
+
 ## 5. Menu Program
 Program memiliki enam menu utama:
 
@@ -89,6 +93,8 @@ Hapus Data Alat / Bahan: Menghapus data dari inventaris berdasarkan ID yang diin
 - Pengembalian: Memproses pengembalian alat berdasarkan ID peminjaman, yang secara otomatis akan mengembalikan jumlah stok alat ke inventaris semula.
 ### 6. Keluar
 Digunakan untuk menghentikan program.
+
+---
 
 ## 6. Demo Program
 <img width="397" height="193" alt="image" src="https://github.com/user-attachments/assets/bba12745-4552-41bb-b432-58dd8eec376c" />
@@ -334,27 +340,6 @@ Fungsi
 ---
 ## 9. Kesimpulan
 Berdasarkan perancangan, pengembangan, dan pengujian yang telah dilakukan, program InventarisLab berhasil dibangun dengan menerapkan arsitektur Model-View-Controller (MVC) yang memisahkan pengelolaan data, tampilan antarmuka, dan logika kontrol secara terstruktur. Program ini juga telah menerapkan konsep Pemrograman Berorientasi Objek (OOP), seperti Inheritance dan Encapsulation pada class model serta Polymorphism melalui method overriding. Selain itu, program dilengkapi dengan fitur pengelolaan data inventaris, peminjaman, pengembalian alat, dan validasi input untuk memastikan data yang dimasukkan sesuai dengan ketentuan. Berdasarkan hasil pengujian, fitur-fitur tersebut dapat berjalan sesuai dengan skenario yang telah ditentukan.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
