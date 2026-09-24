@@ -352,13 +352,13 @@ public class TampilkanInventarisLab {
                     input.nextLine();
 
                     if (pilihanPinjam == 1) {
+                        crud.tampilkanAlat(); 
+                        System.out.println("----------------------------------------");
                         System.out.print("ID Peminjaman : ");
                         int idPeminjaman = input.nextInt();
                         input.nextLine();
                         System.out.print("Nama Peminjam : ");
                         String namaPeminjam = input.nextLine();
-                        crud.tampilkanAlat(); 
-                        System.out.println("----------------------------------------");
                         System.out.print("ID Alat       : ");
                         int idAlatPinjam = input.nextInt();
                         System.out.print("Jumlah Pinjam : ");

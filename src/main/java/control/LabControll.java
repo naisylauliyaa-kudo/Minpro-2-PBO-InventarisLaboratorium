@@ -17,9 +17,10 @@ public class LabControll {
         daftarBahan.add(new BahanLab(201, "Alkohol 96%", 10, "100 ml"));
     }
     
+    // Generator ID Otomatis untuk Alat
     public int generateIdAlat() {
         if (daftarAlat.isEmpty()) {
-            return 1;
+            return 101; // ID awal jika data alat kosong
         }
         int maxId = daftarAlat.get(0).getId();
         for (AlatLab alat : daftarAlat) {
@@ -30,9 +31,10 @@ public class LabControll {
         return maxId + 1;
     }
 
+    // Generator ID Otomatis untuk Bahan
     public int generateIdBahan() {
         if (daftarBahan.isEmpty()) {
-            return 1; // 
+            return 201; // ID awal jika data bahan kosong
         }
         int maxId = daftarBahan.get(0).getId();
         for (BahanLab bahan : daftarBahan) {
@@ -44,7 +46,6 @@ public class LabControll {
     }
 
     public void tambahAlat(AlatLab alat) {
-
         daftarAlat.add(alat);
         System.out.println("Data alat berhasil ditambahkan ^-^");
     }
@@ -65,7 +66,9 @@ public class LabControll {
         boolean ditemukan = false;
         for (AlatLab alat : daftarAlat) {
             if (alat.getId() == idUbah) {
-                alat.setNama(namaBaru);
+                if (!namaBaru.isEmpty()) {
+                    alat.setNama(namaBaru);
+                }
                 alat.setJumlah(jumlahBaru);
                 System.out.println("Data alat berhasil diubah ^-^");
                 ditemukan = true;
@@ -109,9 +112,13 @@ public class LabControll {
         boolean ditemukan = false;
         for (BahanLab bahan : daftarBahan) {
             if (bahan.getId() == idUbah) {
-                bahan.setNama(namaBaru);
+                if (!namaBaru.isEmpty()) {
+                    bahan.setNama(namaBaru);
+                }
                 bahan.setJumlah(jumlahBaru);
-                bahan.setSatuan(satuanBaru);
+                if (!satuanBaru.isEmpty()) {
+                    bahan.setSatuan(satuanBaru);
+                }
                 System.out.println("Data bahan berhasil diubah ^-^");
                 ditemukan = true;
                 break;
@@ -145,7 +152,7 @@ public class LabControll {
         if (alatDipinjam == null) {
             System.out.println("Gagal: ID Alat yang ingin dipinjam tidak terdaftar di inventaris.");
         } else if (alatDipinjam.getJumlah() < peminjaman.getJumlahPinjam()) {
-            System.out.println("Gagal: Stok alat tidak mencukupi. Sisa stok: " + alatDipinjam.getJumlah());
+            System.out.println("Gagal: Stok alat tidak mencukupi. Sisa stok saat ini: " + alatDipinjam.getJumlah());
         } else {
             alatDipinjam.setJumlah(alatDipinjam.getJumlah() - peminjaman.getJumlahPinjam());
             daftarPeminjaman.add(peminjaman);
@@ -185,7 +192,7 @@ public class LabControll {
                 }
             }
             daftarPeminjaman.remove(indexHapus);
-            System.out.println("Pengembalian berhasil dicatat. Stok alat telah dikembalikan ^-^");
+            System.out.println("Pengembalian berhasil dicatot. Stok alat telah dikembalikan ^-^");
         } else {
             System.out.println("ID Peminjaman tidak ditemukan.");
         }
